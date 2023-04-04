@@ -16,12 +16,11 @@ export const HeaderStyle = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0 7.5%;
+  border-bottom: 1px solid #6d5696;
 `;
 
 export const MainStyle = styled.main`
-  background-color: ${(props) =>
-    props.variant === "outline" ? "#000" : "#6caf91"};
-  flex: 1;
+  background-color: #fff;
 `;
 
 export const NavContainerStyle = styled.div`
@@ -42,12 +41,10 @@ export const NavUlContainerStyle = styled.ul`
 
 export const NavLinkStyle = styled.a`
   text-decoration: none;
-  padding: 0;
-  margin: 0;
   font-style: normal;
   font-size: 16px;
   margin-left: 30px;
-  font-weight: 600 !important;
+  font-weight: 600;
   white-space: nowrap;
   color: #ffffff;
 `;
@@ -68,8 +65,11 @@ export const NavLiStyle = styled.li`
 `;
 
 export const FooterStyle = styled.footer`
-  background: #f2f4f7;
-  background: linear-gradient(180deg, #f2f4f7 40%, #492c7c 40%);
+  background: #fff;
+  background: linear-gradient(180deg, #fff 40%, #492c7c 40%);
+  @media (max-width: 990px) {
+    background: linear-gradient(180deg, #fff 36%, #492c7c 36%);
+  }
 `;
 
 export const FooterSectionConStyle = styled.div`
@@ -95,6 +95,9 @@ export const FooterSectionStyle1 = styled.section`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 990px) {
+    padding: 69px 5%;
+  }
   div {
     width: 768px;
     h1 {
@@ -162,7 +165,6 @@ export const FooterSectionStyle1 = styled.section`
       width: 100%;
       li {
         width: 100%;
-        background-color: red;
         margin-left: 0;
         margin-bottom: 12px;
         a {

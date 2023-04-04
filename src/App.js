@@ -1,5 +1,9 @@
 import "./App.css";
 import LandingPage from "./Pages/landingPage";
+import AboutUsPage from "./Pages/AboutUsPage";
+import HowItWorks from "./Pages/HowItWorksPage";
+import Channels from "./Pages/Channels";
+import PricingPage from "./Pages/PricingPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PageNotFound from "./Pages/PageNotFound";
 
@@ -8,6 +12,10 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/AboutUs" element={<AboutUsPage />} />
+        <Route exact path="/HowItWorks" element={<HowItWorks />} />
+        <Route exact path="/Channels" element={<Channels />} />
+        <Route exact path="/Pricing" element={<PricingPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   BaseStyle,
   FooterContactStyle,
@@ -20,7 +21,7 @@ import {
 } from "./BaseStyle";
 import companyLogo from "../../../assets/Images/companyLogo.svg";
 
-function BaseLayout({ children }) {
+function BaseLayout({ children, showLearnMore = true }) {
   return (
     <BaseStyle>
       {/* Header */}
@@ -32,19 +33,29 @@ function BaseLayout({ children }) {
           <nav type="navigator">
             <NavUlContainerStyle>
               <NavLiStyle>
-                <NavLinkStyle href="#/">Home</NavLinkStyle>
+                <Link to="/">
+                  <NavLinkStyle>Home</NavLinkStyle>
+                </Link>
               </NavLiStyle>
               <NavLiStyle>
-                <NavLinkStyle href="#/">About us</NavLinkStyle>
+                <Link to="/AboutUs">
+                  <NavLinkStyle>About us</NavLinkStyle>
+                </Link>
               </NavLiStyle>
               <NavLiStyle>
-                <NavLinkStyle href="#/">How it works</NavLinkStyle>
+                <Link to="/HowItWorks">
+                  <NavLinkStyle>How it works</NavLinkStyle>
+                </Link>
               </NavLiStyle>
               <NavLiStyle>
-                <NavLinkStyle href="#/">Channel</NavLinkStyle>
+                <Link to="/Channels">
+                  <NavLinkStyle>Channels</NavLinkStyle>
+                </Link>
               </NavLiStyle>
               <NavLiStyle>
-                <NavLinkStyle href="#/">Pricing</NavLinkStyle>
+                <Link to="/Pricing">
+                  <NavLinkStyle>Pricing</NavLinkStyle>
+                </Link>
               </NavLiStyle>
             </NavUlContainerStyle>
           </nav>
@@ -74,9 +85,16 @@ function BaseLayout({ children }) {
               </p>
             </div>
             <ul>
-              <li>
-                <a href="#/">Learn more</a>
-              </li>
+              {showLearnMore ? (
+                <li>
+                  <a href="#/">Learn more</a>
+                </li>
+              ) : (
+                <li style={{ display: "none" }}>
+                  <a href="#/">Learn more</a>
+                </li>
+              )}
+
               <li>
                 <a href="#/">Get started</a>
               </li>

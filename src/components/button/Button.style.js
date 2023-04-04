@@ -20,6 +20,6 @@ export const StyleCreateBtn = styled(StyleBtn)`
   padding: 10px 90px;
   //adding pseudo code
   &:hover {
-    background-color: red;
+    /* background-color: red; */
   }
 `;
