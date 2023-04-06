@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 // @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 export const BaseStyle = styled.div`
@@ -39,12 +40,12 @@ export const NavUlContainerStyle = styled.ul`
   }
 `;
 
-export const NavLinkStyle = styled.a`
+export const NavLinkStyle = styled(Link)`
   text-decoration: none;
   font-style: normal;
   font-size: 16px;
-  margin-left: 30px;
   font-weight: 600;
+  margin-left: 30px;
   white-space: nowrap;
   color: #ffffff;
 `;

@@ -33,29 +33,19 @@ function BaseLayout({ children, showLearnMore = true }) {
           <nav type="navigator">
             <NavUlContainerStyle>
               <NavLiStyle>
-                <Link to="/">
-                  <NavLinkStyle>Home</NavLinkStyle>
-                </Link>
+                <NavLinkStyle to="/">Home</NavLinkStyle>
               </NavLiStyle>
               <NavLiStyle>
-                <Link to="/AboutUs">
-                  <NavLinkStyle>About us</NavLinkStyle>
-                </Link>
+                <NavLinkStyle to="/AboutUs">About us</NavLinkStyle>
               </NavLiStyle>
               <NavLiStyle>
-                <Link to="/HowItWorks">
-                  <NavLinkStyle>How it works</NavLinkStyle>
-                </Link>
+                <NavLinkStyle to="/HowItWorks">How it works</NavLinkStyle>
               </NavLiStyle>
               <NavLiStyle>
-                <Link to="/Channels">
-                  <NavLinkStyle>Channels</NavLinkStyle>
-                </Link>
+                <NavLinkStyle to="/Channels">Channels</NavLinkStyle>
               </NavLiStyle>
               <NavLiStyle>
-                <Link to="/Pricing">
-                  <NavLinkStyle>Pricing</NavLinkStyle>
-                </Link>
+                <NavLinkStyle to="/Pricing">Pricing</NavLinkStyle>
               </NavLiStyle>
             </NavUlContainerStyle>
           </nav>
