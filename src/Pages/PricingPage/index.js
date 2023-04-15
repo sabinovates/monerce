@@ -1,5 +1,5 @@
 import React from "react";
-import BaseLayout from "../../components/button/BaseLayout/BaseLayout";
+import BaseLayout from "../../components/LayoutComponent/BaseLayout/BaseLayout";
 import checkCircle from "../../assets/Images/check-circle.svg";
 import { Section1, Section2, Section3 } from "./PricingStyles";
 

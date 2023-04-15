@@ -53,10 +53,10 @@ function BaseLayout({ children, showLearnMore = true }) {
         <nav type="navigator2">
           <NavUlContainerStyle>
             <NavLiStyle>
-              <NavLinkStyle href="#/">Login</NavLinkStyle>
+              <NavLinkStyle to="/Login">Login</NavLinkStyle>
             </NavLiStyle>
             <NavLiStyle>
-              <NavSignUpLinkStyle href="#/">Sign up</NavSignUpLinkStyle>
+              <NavSignUpLinkStyle to="/signup">Sign up</NavSignUpLinkStyle>
             </NavLiStyle>
           </NavUlContainerStyle>
         </nav>

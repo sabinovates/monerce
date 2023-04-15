@@ -1,5 +1,5 @@
 import React from "react";
-import BaseLayout from "../../components/button/BaseLayout/BaseLayout";
+import BaseLayout from "../../components/LayoutComponent/BaseLayout/BaseLayout";
 import { Section1, Section2, Section3 } from "./LandingPageStyle";
 import content1 from "../../assets/Images/Contents.svg";
 import content2 from "../../assets/Images/Image.svg";

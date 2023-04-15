@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import BaseLayout from "../../components/button/BaseLayout/BaseLayout";
+import BaseLayout from "../../components/LayoutComponent/BaseLayout/BaseLayout";
 import CompLogoBigScreen from "../../assets/Images/CompLogoBigScreen.svg";
 import CompLogoSmallScreen from "../../assets/Images/CompLogoSmallScreen.svg";
 import MessageIcon from "../../assets/Images/messages.svg";

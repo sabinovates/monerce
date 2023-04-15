@@ -1,5 +1,5 @@
 import React from "react";
-import BaseLayout from "../../components/button/BaseLayout/BaseLayout";
+import BaseLayout from "../../components/LayoutComponent/BaseLayout/BaseLayout";
 import FeaturesSection from "../../components/FeaturesSection";
 import humanIMG from "../../assets/Images/humanIMG.svg";
 import icon from "../../assets/Images/Featured icon (1).svg";
