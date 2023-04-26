@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   BaseStyle,
   FooterContactStyle,
@@ -22,6 +22,10 @@ import {
 import companyLogo from "../../../assets/Images/companyLogo.svg";
 
 function BaseLayout({ children, showLearnMore = true }) {
+  const location = useLocation();
+  // Extract the current page's pathname
+  const pathname = location.pathname;
+
   return (
     <BaseStyle>
       {/* Header */}
@@ -33,19 +37,46 @@ function BaseLayout({ children, showLearnMore = true }) {
           <nav type="navigator">
             <NavUlContainerStyle>
               <NavLiStyle>
-                <NavLinkStyle to="/">Home</NavLinkStyle>
+                <NavLinkStyle
+                  to="/"
+                  style={pathname === "/" ? { color: "#FCCE34" } : null}
+                >
+                  Home
+                </NavLinkStyle>
               </NavLiStyle>
               <NavLiStyle>
-                <NavLinkStyle to="/AboutUs">About us</NavLinkStyle>
+                <NavLinkStyle
+                  to="/aboutUs"
+                  style={pathname === "/aboutUs" ? { color: "#FCCE34" } : null}
+                >
+                  About us
+                </NavLinkStyle>
               </NavLiStyle>
               <NavLiStyle>
-                <NavLinkStyle to="/HowItWorks">How it works</NavLinkStyle>
+                <NavLinkStyle
+                  to="/howItWorks"
+                  style={
+                    pathname === "/howItWorks" ? { color: "#FCCE34" } : null
+                  }
+                >
+                  How it works
+                </NavLinkStyle>
               </NavLiStyle>
               <NavLiStyle>
-                <NavLinkStyle to="/Channels">Channels</NavLinkStyle>
+                <NavLinkStyle
+                  to="/channels"
+                  style={pathname === "/channels" ? { color: "#FCCE34" } : null}
+                >
+                  Channels
+                </NavLinkStyle>
               </NavLiStyle>
               <NavLiStyle>
-                <NavLinkStyle to="/Pricing">Pricing</NavLinkStyle>
+                <NavLinkStyle
+                  to="/pricing"
+                  style={pathname === "/pricing" ? { color: "#FCCE34" } : null}
+                >
+                  Pricing
+                </NavLinkStyle>
               </NavLiStyle>
             </NavUlContainerStyle>
           </nav>
@@ -53,7 +84,7 @@ function BaseLayout({ children, showLearnMore = true }) {
         <nav type="navigator2">
           <NavUlContainerStyle>
             <NavLiStyle>
-              <NavLinkStyle to="/Login">Login</NavLinkStyle>
+              <NavLinkStyle to="/login">Login</NavLinkStyle>
             </NavLiStyle>
             <NavLiStyle>
               <NavSignUpLinkStyle to="/signup">Sign up</NavSignUpLinkStyle>
@@ -96,13 +127,34 @@ function BaseLayout({ children, showLearnMore = true }) {
                 <img src={companyLogo} alt="companyIcon" />
                 <FooterContactUlStyle>
                   <li>
-                    <a href="#/">FAQ</a>
+                    <Link
+                      to="/faq"
+                      style={pathname === "/faq" ? { color: "#FCCE34" } : null}
+                    >
+                      FAQ
+                    </Link>
                   </li>
                   <li>
-                    <a href="#/">Contact us</a>
+                    <Link
+                      to="/contact_us"
+                      style={
+                        pathname === "/contact_us" ? { color: "#FCCE34" } : null
+                      }
+                    >
+                      Contact us
+                    </Link>
                   </li>
                   <li>
-                    <a href="#/">Become an agent</a>
+                    <Link
+                      to="/become_an_agency"
+                      style={
+                        pathname === "/become_an_agency"
+                          ? { color: "#FCCE34" }
+                          : null
+                      }
+                    >
+                      Become an agent
+                    </Link>
                   </li>
                 </FooterContactUlStyle>
               </div>
@@ -126,13 +178,34 @@ function BaseLayout({ children, showLearnMore = true }) {
                 </li>
                 <FooterTermsStyle>
                   <h1>
-                    <a href="#/">Terms</a>
+                    <Link
+                      to="/terms"
+                      style={
+                        pathname === "/terms" ? { color: "#FCCE34" } : null
+                      }
+                    >
+                      Terms
+                    </Link>
                   </h1>
                   <h1>
-                    <a href="#/">Privacy</a>
+                    <Link
+                      to="/privacy"
+                      style={
+                        pathname === "/privacy" ? { color: "#FCCE34" } : null
+                      }
+                    >
+                      Privacy
+                    </Link>
                   </h1>
                   <h1>
-                    <a href="#/">Cookies</a>
+                    <Link
+                      to="/cookies"
+                      style={
+                        pathname === "/cookies" ? { color: "#FCCE34" } : null
+                      }
+                    >
+                      Cookies
+                    </Link>
                   </h1>
                 </FooterTermsStyle>
               </FooterContactUlStyle>

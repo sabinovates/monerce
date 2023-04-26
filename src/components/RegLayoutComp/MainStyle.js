@@ -3,7 +3,6 @@ import { Form, ErrorMessage } from "formik";
 
 export const MainStyle = styled.main`
   background-color: #fff;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -4,6 +4,7 @@ import FeaturesSection from "../../components/FeaturesSection";
 import humanIMG from "../../assets/Images/humanIMG.svg";
 import icon from "../../assets/Images/Featured icon (1).svg";
 import { Section1, Section2 } from "./AboutUsStyle";
+import { data } from "../../data/aboutUsFeaturesData";
 
 function Index() {
   return (
@@ -47,7 +48,14 @@ function Index() {
       </Section1>
       <Section2>
         <ul>
-          <li>
+          {data.map((d) => (
+            <li key={d.key}>
+              <img src={d.icon} alt="icon" />
+              <h1>{d.title}</h1>
+              <h2>{d.content}</h2>
+            </li>
+          ))}
+          {/* <li>
             <img src={icon} alt="icon" />
             <h1>Mission</h1>
             <h2>
@@ -73,7 +81,7 @@ function Index() {
               innovative technology to connect businesses and customers via
               messaging services, without requiring mobile apps."
             </h2>
-          </li>
+          </li> */}
         </ul>
       </Section2>
       <FeaturesSection />

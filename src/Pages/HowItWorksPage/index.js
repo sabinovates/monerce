@@ -2,7 +2,7 @@ import React from "react";
 import BaseLayout from "../../components/LayoutComponent/BaseLayout/BaseLayout";
 import { Section1, Section2 } from "./HowItWorksStyles";
 import Content1 from "../../assets/Images/Content1.svg";
-import frame1 from "../../assets/Images/Frame1.svg";
+import { data } from "../../data/howItWorksData";
 
 function Index() {
   return (
@@ -45,7 +45,13 @@ function Index() {
           <h2>This is a pictorial story of how Monerce works</h2>
         </div>
         <ul>
-          <li>
+          {data.map((d) => (
+            <li key={d.key}>
+              <img src={d.img} alt="img1" />
+              <p>{d.content}</p>
+            </li>
+          ))}
+          {/* <li>
             <img src={frame1} alt="img1" />
             <p>Daniel Baokai saw a product advertised on a bill board</p>
           </li>
@@ -80,7 +86,7 @@ function Index() {
           <li>
             <img src={frame1} alt="img1" />
             <p>Daniel Baokai saw a product advertised on a bill board</p>
-          </li>
+          </li> */}
         </ul>
       </Section2>
     </BaseLayout>

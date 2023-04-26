@@ -1,6 +1,6 @@
 import React from "react";
 import { Section4 } from "../Pages/landingPage/LandingPageStyle";
-import icon1 from "../assets/Images/FeaturedIcon.svg";
+import { data } from "../data/landingPageFeaturesData";
 function FeaturesSection() {
   return (
     <Section4>
@@ -14,66 +14,15 @@ function FeaturesSection() {
         </h2>
       </p>
       <ul>
-        <li>
-          <img src={icon1} alt="icon" />
-          <p>
-            <h1>Buy</h1>
-            <h2>
-              To purchase a demo product, send a text message with the content
-              "Buy 101010" to +231880538190 or +231770538190.
-            </h2>
-          </p>
-        </li>
-        <li>
-          <img src={icon1} alt="icon" />
-          <p>
-            <h1>Buy</h1>
-            <h2>
-              To purchase a demo product, send a text message with the content
-              "Buy 101010" to +231880538190 or +231770538190.
-            </h2>
-          </p>
-        </li>
-        <li>
-          <img src={icon1} alt="icon" />
-          <p>
-            <h1>Buy</h1>
-            <h2>
-              To purchase a demo product, send a text message with the content
-              "Buy 101010" to +231880538190 or +231770538190.
-            </h2>
-          </p>
-        </li>
-        <li>
-          <img src={icon1} alt="icon" />
-          <p>
-            <h1>Buy</h1>
-            <h2>
-              To purchase a demo product, send a text message with the content
-              "Buy 101010" to +231880538190 or +231770538190.
-            </h2>
-          </p>
-        </li>
-        <li>
-          <img src={icon1} alt="icon" />
-          <p>
-            <h1>Buy</h1>
-            <h2>
-              To purchase a demo product, send a text message with the content
-              "Buy 101010" to +231880538190 or +231770538190.
-            </h2>
-          </p>
-        </li>
-        <li>
-          <img src={icon1} alt="icon" />
-          <p>
-            <h1>Buy</h1>
-            <h2>
-              To purchase a demo product, send a text message with the content
-              "Buy 101010" to +231880538190 or +231770538190.
-            </h2>
-          </p>
-        </li>
+        {data.map((d) => (
+          <li key={d.key}>
+            <img src={d.icon} alt="icon" />
+            <p>
+              <h1>{d.title}</h1>
+              <h2>{d.content}</h2>
+            </p>
+          </li>
+        ))}
       </ul>
     </Section4>
   );

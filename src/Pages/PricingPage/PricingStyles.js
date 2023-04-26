@@ -151,6 +151,9 @@ export const Section3 = styled.section`
         font-size: 20px;
         line-height: 30px;
         color: #ffffff;
+        :last-child {
+          border-bottom: none;
+        }
         h1 {
           @media (max-width: 850px) {
             width: 231px;

@@ -5,6 +5,7 @@ import CompLogoSmallScreen from "../../assets/Images/CompLogoSmallScreen.svg";
 import MessageIcon from "../../assets/Images/messages.svg";
 import ArrowIcon from "../../assets/Images/ArrowIcon.svg";
 import { Section1, Section2 } from "./ChannelsStyles";
+import { data } from "../../data/channelsData";
 
 function Index() {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
@@ -41,66 +42,23 @@ function Index() {
           </h2>
         </p>
         <ul>
-          <li>
-            <img src={MessageIcon} alt="icon" />
-            <div>
-              <h2>WhatsApp</h2>
-              <h3>Send a text message to +231880538190</h3>
-            </div>
-          </li>
-          <li>
-            <img src={MessageIcon} alt="icon" />
-            <div>
-              <h2>WhatsApp</h2>
-              <h3>Discover @Monerce, DM us, and experience new commerce.</h3>
-            </div>
-          </li>
-          <li>
-            <img src={MessageIcon} alt="icon" />
-            <div>
-              <h2>WhatsApp</h2>
-              <h3>Message us on Facebook @Monerce for an instant response.</h3>
-              <nav>
-                <a href="/#">
-                  <h1>Try Now</h1>
-                  <img src={ArrowIcon} alt="arrowIcon" />
-                </a>
-              </nav>
-            </div>
-          </li>
-          <li>
-            <img src={MessageIcon} alt="icon" />
-            <div>
-              <h2>WhatsApp</h2>
-              <h3>Send a text message to +231880538190</h3>
-            </div>
-          </li>
-          <li>
-            <img src={MessageIcon} alt="icon" />
-            <div>
-              <h2>WhatsApp</h2>
-              <h3>Discover @Monerce, DM us, and experience new commerce.</h3>
-              <nav>
-                <a href="/#">
-                  <h1>Try Now</h1>
-                  <img src={ArrowIcon} alt="arrowIcon" />
-                </a>
-              </nav>
-            </div>
-          </li>
-          <li>
-            <img src={MessageIcon} alt="icon" />
-            <div>
-              <h2>WhatsApp</h2>
-              <h3>Message us on Facebook @Monerce for an instant response.</h3>
-              <nav>
-                <a href="/#">
-                  <h1>Try Now</h1>
-                  <img src={ArrowIcon} alt="arrowIcon" />
-                </a>
-              </nav>
-            </div>
-          </li>
+          {data.map((d) => (
+            <li key={d.key}>
+              <img src={d.icon} alt="icon" />
+              <div>
+                <h2>{d.title}</h2>
+                <h3>{d.content}</h3>
+                {d.link ? (
+                  <nav>
+                    <a href="/#">
+                      <h1>Try Now</h1>
+                      <img src={ArrowIcon} alt="arrowIcon" />
+                    </a>
+                  </nav>
+                ) : null}
+              </div>
+            </li>
+          ))}
         </ul>
       </Section2>
     </BaseLayout>

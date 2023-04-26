@@ -7,6 +7,7 @@ export const BaseStyle = styled.div`
   min-height: 100vh;
   flex-direction: column;
   margin: 0;
+  background-color: #f9fafb;
 `;
 
 export const HeaderStyle = styled.header`
@@ -21,7 +22,7 @@ export const HeaderStyle = styled.header`
 `;
 
 export const MainStyle = styled.main`
-  background-color: #fff;
+  /* background-color: #fff; */
 `;
 
 export const NavContainerStyle = styled.div`
