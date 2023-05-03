@@ -1,18 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import RegLayout from "../../components/RegLayoutComp/RegLayout";
 import { Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
   FormContainer,
   StyledErrorMessage,
+  SubmitButton,
 } from "../../components/RegLayoutComp/MainStyle";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
-const SubmitButton = styled.button`
-  background-color: ${(props) => (props.disabled ? "#d3c7eb" : "#492C7C")};
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-`;
 const initialValues = {
   password: "",
   confirmPassword: "",
@@ -45,8 +41,22 @@ const validationSchema = Yup.object({
 });
 
 function SignupPage() {
+  const [showErrorCard, setshowErrorCard] = useState(true);
+  const errorCardMsg =
+    "please provide the correct invitation code sent to your phone number";
+  const [signupCongrat, setSignupCongrat] = useState(false);
+
+  const handleShowErrorCard = () => {
+    setshowErrorCard(false);
+  };
   return (
-    <RegLayout>
+    <RegLayout
+      showErrorCard={showErrorCard}
+      handleShowErrorCard={handleShowErrorCard}
+      errorCardMsg={errorCardMsg}
+      cardHeader="Invitation Code Unsuccessful"
+      signupCongrat={signupCongrat}
+    >
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}

@@ -7,10 +7,17 @@ import {
 } from "../LayoutComponent/BaseLayout/BaseStyle";
 import { Link } from "react-router-dom";
 import { MainStyle } from "./MainStyle";
-import cautionIcon from "../../assets/Images/Icon (1).svg";
-import closeIcon from "../../assets/Images/Icon (2).svg";
+import ErrorCard from "../ErrorCard";
+import SignupCongratPage from "../../Pages/SignupPage/SignupCongratPage";
 
-function RegLayout({ children }) {
+function RegLayout({
+  children,
+  showErrorCard,
+  handleShowErrorCard,
+  errorCardMsg,
+  cardHeader,
+  signupCongrat,
+}) {
   return (
     <div>
       <HeaderStyle>
@@ -20,22 +27,23 @@ function RegLayout({ children }) {
       </HeaderStyle>
 
       <MainStyle>
-        <nav>
-          <Link to="/">-- Back to home</Link>
-        </nav>
-        <section>{children}</section>
-        <main>
-          <aside>
-            <p>
-              <img src={cautionIcon} alt="icon" />
-              <h4>Invitation Code Unsuccessful</h4>
-            </p>
-            <img src={closeIcon} alt="icon" />
-          </aside>
-          <h5>
-            please provide the correct invitation code sent to your phone number
-          </h5>
-        </main>
+        {signupCongrat ? (
+          <SignupCongratPage />
+        ) : (
+          <>
+            <nav>
+              <Link to="/">-- Back to home</Link>
+            </nav>
+            <section>{children}</section>
+            {showErrorCard ? (
+              <ErrorCard
+                cardHeader={cardHeader}
+                handleShowErrorCard={handleShowErrorCard}
+                errorMsg={errorCardMsg}
+              />
+            ) : null}
+          </>
+        )}
       </MainStyle>
     </div>
   );

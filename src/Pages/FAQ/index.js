@@ -47,56 +47,6 @@ function FAQ() {
             </li>
             <li>
               <p>
-                <h2>What is Monerce?</h2>
-                {openAnswer === 2 ? (
-                  <img
-                    src={closeIcon}
-                    alt="closeIcon"
-                    onClick={() => handleOpenAnswer(0)}
-                  />
-                ) : (
-                  <img
-                    src={openIcon}
-                    alt="openIcon"
-                    onClick={() => handleOpenAnswer(2)}
-                  />
-                )}
-              </p>
-              {openAnswer === 2 ? (
-                <h3>
-                  Yes, you can try us for free for 30 days. If you want, we’ll
-                  provide you with a free, personalized 30-minute onboarding
-                  call to get you up and running as soon as possible.
-                </h3>
-              ) : null}
-            </li>
-            <li>
-              <p>
-                <h2>What is Monerce?</h2>
-                {openAnswer === 3 ? (
-                  <img
-                    src={closeIcon}
-                    alt="closeIcon"
-                    onClick={() => handleOpenAnswer(0)}
-                  />
-                ) : (
-                  <img
-                    src={openIcon}
-                    alt="openIcon"
-                    onClick={() => handleOpenAnswer(3)}
-                  />
-                )}
-              </p>
-              {openAnswer === 3 ? (
-                <h3>
-                  Yes, you can try us for free for 30 days. If you want, we’ll
-                  provide you with a free, personalized 30-minute onboarding
-                  call to get you up and running as soon as possible.
-                </h3>
-              ) : null}
-            </li>
-            <li>
-              <p>
                 <h2>What types of payments does Monerce support?</h2>
                 {openAnswer === 4 ? (
                   <img
@@ -173,7 +123,7 @@ function FAQ() {
             <li>
               <p>
                 <h2>What are the fees associated with using Monerce?</h2>
-                {openAnswer === 6 ? (
+                {openAnswer === 7 ? (
                   <img
                     src={closeIcon}
                     alt="closeIcon"
@@ -187,7 +137,7 @@ function FAQ() {
                   />
                 )}
               </p>
-              {openAnswer === 6 ? (
+              {openAnswer === 7 ? (
                 <h3>
                   Yes, you can try us for free for 30 days. If you want, we’ll
                   provide you with a free, personalized 30-minute onboarding
@@ -198,7 +148,7 @@ function FAQ() {
             <li>
               <p>
                 <h2>How long does it take to set up a Monerce account?</h2>
-                {openAnswer === 6 ? (
+                {openAnswer === 8 ? (
                   <img
                     src={closeIcon}
                     alt="closeIcon"
@@ -212,7 +162,7 @@ function FAQ() {
                   />
                 )}
               </p>
-              {openAnswer === 6 ? (
+              {openAnswer === 8 ? (
                 <h3>
                   Yes, you can try us for free for 30 days. If you want, we’ll
                   provide you with a free, personalized 30-minute onboarding
@@ -223,7 +173,7 @@ function FAQ() {
             <li>
               <p>
                 <h2>Does Monerce provide customer support?</h2>
-                {openAnswer === 6 ? (
+                {openAnswer === 9 ? (
                   <img
                     src={closeIcon}
                     alt="closeIcon"
@@ -237,7 +187,7 @@ function FAQ() {
                   />
                 )}
               </p>
-              {openAnswer === 6 ? (
+              {openAnswer === 9 ? (
                 <h3>
                   Yes, you can try us for free for 30 days. If you want, we’ll
                   provide you with a free, personalized 30-minute onboarding
@@ -252,7 +202,7 @@ function FAQ() {
                   What is Online-To-Offline (O2O) commerce, and how does Monerce
                   enable it?
                 </h2>
-                {openAnswer === 6 ? (
+                {openAnswer === 10 ? (
                   <img
                     src={closeIcon}
                     alt="closeIcon"
@@ -266,7 +216,7 @@ function FAQ() {
                   />
                 )}
               </p>
-              {openAnswer === 6 ? (
+              {openAnswer === 10 ? (
                 <h3>
                   Yes, you can try us for free for 30 days. If you want, we’ll
                   provide you with a free, personalized 30-minute onboarding
@@ -280,7 +230,7 @@ function FAQ() {
                   What is a USSD payment option, and how does it work with
                   Monerce?
                 </h2>
-                {openAnswer === 6 ? (
+                {openAnswer === 11 ? (
                   <img
                     src={closeIcon}
                     alt="closeIcon"
@@ -294,7 +244,7 @@ function FAQ() {
                   />
                 )}
               </p>
-              {openAnswer === 6 ? (
+              {openAnswer === 11 ? (
                 <h3>
                   Yes, you can try us for free for 30 days. If you want, we’ll
                   provide you with a free, personalized 30-minute onboarding
@@ -308,7 +258,7 @@ function FAQ() {
                   What is an Artificial Intelligence-powered chatbot, and how
                   does it help with payment processing?
                 </h2>
-                {openAnswer === 6 ? (
+                {openAnswer === 12 ? (
                   <img
                     src={closeIcon}
                     alt="closeIcon"
@@ -322,7 +272,7 @@ function FAQ() {
                   />
                 )}
               </p>
-              {openAnswer === 6 ? (
+              {openAnswer === 12 ? (
                 <h3>
                   Yes, you can try us for free for 30 days. If you want, we’ll
                   provide you with a free, personalized 30-minute onboarding
@@ -336,7 +286,7 @@ function FAQ() {
                   How does Monerce cater to users who are not comfortable with
                   mobile app technology?
                 </h2>
-                {openAnswer === 6 ? (
+                {openAnswer === 13 ? (
                   <img
                     src={closeIcon}
                     alt="closeIcon"
@@ -350,7 +300,7 @@ function FAQ() {
                   />
                 )}
               </p>
-              {openAnswer === 6 ? (
+              {openAnswer === 13 ? (
                 <h3>
                   Yes, you can try us for free for 30 days. If you want, we’ll
                   provide you with a free, personalized 30-minute onboarding

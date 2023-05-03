@@ -32,7 +32,11 @@ export const MainStyle = styled.main`
         align-items: center;
         img {
           margin-right: 13px;
+          cursor: pointer;
         }
+      }
+      img {
+        cursor: pointer;
       }
       h4 {
         font-style: normal;
@@ -143,6 +147,18 @@ export const FormContainer = styled(Form)`
 
     margin-bottom: 32px;
   }
+  h5 {
+    text-align: right;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 24px;
+    a {
+      color: #492c7c;
+      text-decoration: none;
+    }
+  }
 
   h4 {
     text-align: center;
@@ -172,5 +188,7 @@ export const StyledErrorMessage = styled(ErrorMessage)`
 `;
 
 export const SubmitButton = styled.button`
-  background-color: ${(props) => (props.disabled ? "gray" : "green")};
+  background-color: ${(props) => (props.disabled ? "#d3c7eb" : "#492C7C")};
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  border: none !important;
 `;

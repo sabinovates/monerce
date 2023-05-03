@@ -1,18 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import RegLayout from "../../components/RegLayoutComp/RegLayout";
 import { Formik, Field } from "formik";
 import * as Yup from "yup";
 import {
   FormContainer,
   StyledErrorMessage,
+  SubmitButton,
 } from "../../components/RegLayoutComp/MainStyle";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
-const SubmitButton = styled.button`
-  background-color: ${(props) => (props.disabled ? "#d3c7eb" : "#492C7C")};
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-`;
 const initialValues = {
   password: "",
   businessEmailAddress: "",
@@ -32,13 +28,27 @@ const validationSchema = Yup.object({
 });
 
 function LoginPage() {
+  const [showErrorCard, setshowErrorCard] = useState(true);
+  const [errorCardMsg, setErrorCardMsg] = useState(
+    "email or password is incorrect"
+  );
+
+  const handleShowErrorCard = () => {
+    setshowErrorCard(false);
+  };
+
   return (
-    <RegLayout>
+    <RegLayout
+      showErrorCard={showErrorCard}
+      handleShowErrorCard={handleShowErrorCard}
+      errorCardMsg={errorCardMsg}
+      cardHeader="Sign in Error"
+    >
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={(values, { setSubmitting }) => {
-          console.log(values);
+          console.log({ values });
           setSubmitting(false);
         }}
       >
@@ -61,6 +71,9 @@ function LoginPage() {
               <Field type="password" name="password" />
               <StyledErrorMessage name="password" component="div" />
             </div>
+            <h5>
+              <Link>Forgot password</Link>
+            </h5>
             <SubmitButton
               type="submit"
               disabled={
@@ -68,11 +81,11 @@ function LoginPage() {
               }
               onClick={() => console.log("yes")}
             >
-              Register now
+              Sign in
             </SubmitButton>
             <h4>
-              Already have an account?
-              <Link to="">Log in</Link>
+              Don’t have an account?
+              <Link to="/signup">Sign up</Link>
             </h4>
           </FormContainer>
         )}
