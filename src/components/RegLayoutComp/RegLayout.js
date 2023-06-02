@@ -1,5 +1,6 @@
 import React from "react";
 import companyLogo from "../../assets/Images/companyLogo.svg";
+import backArrowIcon from "../../assets/Images/Icon (6).svg";
 import {
   HeaderStyle,
   NavContainerStyle,
@@ -32,8 +33,12 @@ function RegLayout({
         ) : (
           <>
             <nav>
-              <Link to="/">-- Back to home</Link>
+              <Link to="/">
+                <img src={backArrowIcon} alt="backArrowIcon" />
+                <h1>Back to home</h1>
+              </Link>
             </nav>
+
             <section>{children}</section>
             {showErrorCard ? (
               <ErrorCard

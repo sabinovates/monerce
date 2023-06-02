@@ -63,7 +63,27 @@ export const MainStyle = styled.main`
     min-height: 80px;
     padding-top: 40px;
     @media (min-width: 800px) {
-      margin-left: 50px;
+      /* margin-left: 50px; */
+    }
+    a {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      width: 100%;
+      max-width: 200px;
+      color: #101828;
+      text-decoration: none;
+      @media (max-width: 800px) {
+        max-width: 30px;
+      }
+      img {
+        margin-right: 25px;
+      }
+      h1 {
+        @media (max-width: 800px) {
+          display: none;
+        }
+      }
     }
   }
   section {
